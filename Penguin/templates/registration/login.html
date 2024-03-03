@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+
+<style>
+    div{
+        padding: 100px;
+    }
+</style>
+
+
+
+<body>
+{% block base %}
+<form method="POST">
+<div>
+    {{ form.as_p }}
+    {% csrf_token %}
+<input type="submit">
+</div>
+    
+</form>
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Author</title>
+</head>
+{% block base %}
+<body>
+{% if obj %}
+<table>
+    <thead>
+    <td>
+        Author Name
+    </td>
+    <td>
+        Number Of Book published
+    </td>
+    <td>
+        Mobile
+    </td>
+    <td>
+        Email
+    
+    </td>
+    </thead>
+    
+    
+    {% for i in obj %}
+    
+    <td>
+        {{ i.aname }}
+    </td>
+    <td>
+        {{i.nump}}
+    </td>
+    <td>
+        {{i.amobile}}
+    </td>
+    <td>
+        {{i.aemail}}
+    </td>
+    </td>
+    {% endfor %}
+    
+    
+    
+    
+</table>
+{%endif%}
+
+{% endblock %}
+
+</body>
+</html>
